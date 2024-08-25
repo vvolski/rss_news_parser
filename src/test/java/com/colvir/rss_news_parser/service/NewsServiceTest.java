@@ -1,6 +1,6 @@
 package com.colvir.rss_news_parser.service;
 
-import com.colvir.rss_news_parser.MapperConfiguration;
+import com.colvir.rss_news_parser.config.MapperConfiguration;
 import com.colvir.rss_news_parser.dto.NewsListResponse;
 import com.colvir.rss_news_parser.dto.NewsResponse;
 import com.colvir.rss_news_parser.mapper.NewsMapper;
@@ -20,7 +20,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 

@@ -74,7 +74,7 @@ public class ParserService {
                     //Если последний элемент порции тегов: проверяем что новости нет в БД и вставляем
                 } else if (event.isEndElement() &&
                         event.asEndElement().getName().getLocalPart().equals(ITEM) &&
-                        !guid.isEmpty() && !newsService.isExist(guid)) {
+                        guid.equals(link) && !newsService.isExist(guid)) {
                     //Всегда чистый объект без остатков данных прошлых итераций
                     News news = new News();
                     news.setTitle(title);
